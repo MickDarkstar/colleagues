@@ -10,10 +10,9 @@ import { TrettonColleagueService } from 'src/app/common/services/tretton-colleag
 export class ColleaguesComponent implements OnInit {
   currentColleagues: ITrettonColleague[] = [];
   searchText: string = '';
+  viewList = true;
 
-  constructor(
-    private colleaugeService: TrettonColleagueService,
-  ) { }
+  constructor(private colleaugeService: TrettonColleagueService) { }
 
   ngOnInit(): void {
     this.colleaugeService.tretton37Colleagues.subscribe(x => {
@@ -23,4 +22,7 @@ export class ColleaguesComponent implements OnInit {
     this.colleaugeService.getAllColleagues();
   }
 
+  listView(value: boolean) {
+    this.viewList = value;
+  }
 }

@@ -1,24 +1,59 @@
-<mat-toolbar color="primary">
+<mat-toolbar>
   <mat-toolbar-row>
-    <span class="title">The fellowship of the Tretton37</span>
+    <span>The fellowship of the Tretton37</span>
+    <span class="spacer"></span>
+    <mat-form-field class="searchbar">
+      <input class="input" matInput name="search" [(ngModel)]="searchText" placeholder="Search" debounce="500">
+    </mat-form-field>
+
+    <button mat-icon-button [matMenuTriggerFor]="sortMenu">
+      <mat-icon>sort</mat-icon>
+    </button>
+    <mat-menu #sortMenu="matMenu" title="Sort by">
+      <button mat-menu-item>Name</button>
+      <button mat-menu-item>Office</button>
+    </mat-menu>
+
+    <button mat-icon-button [matMenuTriggerFor]="filterMenu" title="Filter by">
+      <mat-icon>filter_alt</mat-icon>
+    </button>
+    <mat-menu #filterMenu="matMenu">
+      <button mat-menu-item>Name</button>
+      <button mat-menu-item>Office</button>
+    </mat-menu>
+
+    <button mat-icon-button [matMenuTriggerFor]="displayOptionsMenu" title="View">
+      <mat-icon>settings</mat-icon>
+    </button>
+    <mat-menu #displayOptionsMenu="matMenu">
+      <button mat-menu-item (click)="listView(true)">
+        <mat-icon>view_list</mat-icon> List
+      </button>
+      <button mat-menu-item (click)="listView(false)">
+        <mat-icon>grid_view</mat-icon> Grid
+      </button>
+    </mat-menu>
   </mat-toolbar-row>
 </mat-toolbar>
+
 <mat-divider></mat-divider>
 
-<mat-toolbar color="secondary" class="toolbox">
-  <span class="spacer"></span>
-  <mat-divider></mat-divider>
-  <mat-toolbar-row>
-    <form class="form">
-      <mat-form-field class="full-width">
-        <input class="input" matInput name="search" [(ngModel)]="searchText" placeholder="Search" debounce="500"
-          showCancelButton="focus">
-      </mat-form-field>
-    </form>
-  </mat-toolbar-row>
-</mat-toolbar>
+<div class="main-content">
+  <ng-template [ngIf]="viewList" [ngIfElse]="grid">
+    <div fxLayout="column wrap" fxLayoutGap="16px" class="full-width">
+      <app-colleague-card fxLayoutAlign="center center" *ngFor="let colleague of currentColleagues | filter: searchText"
+        [data]="colleague">
+      </app-colleague-card>
+    </div>
+  </ng-template>
 
-<div>
-  <app-colleague-card *ngFor="let colleague of currentColleagues | filter: searchText" [data]="colleague">
-  </app-colleague-card>
+  <ng-template #grid>
+    <div fxLayout="row wrap" fxLayoutGap="16px grid">
+      <div fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%"
+        *ngFor="let colleague of currentColleagues | filter: searchText">
+        <app-colleague-card [data]="colleague">
+        </app-colleague-card>
+      </div>
+    </div>
+  </ng-template>
 </div>

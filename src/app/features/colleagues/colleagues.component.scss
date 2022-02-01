@@ -1,11 +1,22 @@
-.form {
+mat-toolbar {
+  top: 0;
+  position: fixed;
+  z-index: 10;
+}
+
+.searchbar {
   min-width: 150px;
   max-width: 500px;
   width: 100%;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
-.title {
-  margin: 0 auto;
+.main-content {
+  overflow-x: hidden;
+  overflow-y: hidden;
+  margin-top: 64px;
+  text-align: center;
 }
 
 .full-width {
@@ -14,8 +25,4 @@
 
 .spacer {
   flex: 1 1 auto;
-}
-
-:ng-deep > .toolbox {
-  height: 90px;
 }

@@ -1,12 +1,15 @@
 .card {
-  max-width: 400px;
-  margin: 16px auto;
+  width: 200px;
+  // margin: 16px auto;
+  // display: flex;
+  // margin: 0 auto; // för listan
+  padding: 16px;
 }
 
-.image {
-  background-image: url("https://material.angular.io/assets/img/examples/shiba1.jpg");
-  background-size: cover;
-}
+// .mat-card-image {
+//   width: calc(100% - 32px);
+//   margin: 0 -16px 16px -16px;
+// }
 
 mat-icon {
   padding: 8px;
