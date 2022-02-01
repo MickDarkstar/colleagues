@@ -4,12 +4,16 @@
     <mat-card-subtitle>{{ data?.office }}</mat-card-subtitle>
   </mat-card-header>
   <img mat-card-image src="{{ data?.imagePortraitUrl }}" alt="Photo of: {{ data?.name }}">
-  <mat-card-content>
 
-  </mat-card-content>
   <mat-card-actions>
-    <mat-icon aria-hidden="false">home</mat-icon>
-    <mat-icon aria-hidden="false">home</mat-icon>
-    <mat-icon aria-hidden="false">linkedin</mat-icon>
+    <mat-icon>
+      <img class="link-image" src="../../../../assets/icons/github.png" alt="github">
+    </mat-icon>
+    <mat-icon>
+      <img class="link-image" src="./assets/icons/twitter.png" alt="twitter">
+    </mat-icon>
+    <mat-icon>
+      <img class="link-image" src="./../../../../assets/icons/linkedin.png" alt="linkedin">
+    </mat-icon>
   </mat-card-actions>
 </mat-card>
