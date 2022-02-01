@@ -18,7 +18,6 @@
 </mat-toolbar>
 
 <div>
-  <app-colleague-card></app-colleague-card>
-  <app-colleague-card></app-colleague-card>
-  <app-colleague-card></app-colleague-card>
+  <app-colleague-card *ngFor="let colleague of currentColleagues | filter: searchText" [data]="colleague">
+  </app-colleague-card>
 </div>
