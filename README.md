@@ -9,6 +9,9 @@ Implemented functionalites:
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.1.
 Other dependencies angular-flexlayout, angular-material
 
+# Preview
+https://tretton37-code-assignment.web.app/colleagues
+
 ## Development server
 Install node and node package manager:
 https://docs.npmjs.com/cli/v8/configuring-npm/install
