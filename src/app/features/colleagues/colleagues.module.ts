@@ -11,6 +11,10 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
 import { FilterPipe } from 'src/app/common/pipes/filter.pipe';
+import { ApiClientService } from 'src/app/common/services/api-client.service';
+import { TrettonColleagueService } from 'src/app/common/services/tretton-colleagues/tretton-colleague.service';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,6 +24,7 @@ import { FilterPipe } from 'src/app/common/pipes/filter.pipe';
   ],
   imports: [
     CommonModule,
+    HttpClientModule,
     MatListModule,
     MatToolbarModule,
     MatInputModule,
@@ -27,7 +32,12 @@ import { FilterPipe } from 'src/app/common/pipes/filter.pipe';
     MatCardModule,
     MatIconModule,
     MatDividerModule,
-    ColleaguesRoutingModule
+    ColleaguesRoutingModule,
+    FormsModule
+  ],
+  providers: [
+    ApiClientService,
+    TrettonColleagueService
   ]
 })
 export class ColleaguesModule { }

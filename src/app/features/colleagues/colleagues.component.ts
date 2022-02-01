@@ -17,9 +17,7 @@ export class ColleaguesComponent implements OnInit {
 
   ngOnInit(): void {
     this.colleaugeService.tretton37Colleagues.subscribe(x => {
-      if (!x) { return; }
       this.currentColleagues = x;
-
     });
 
     this.colleaugeService.getAllColleagues();

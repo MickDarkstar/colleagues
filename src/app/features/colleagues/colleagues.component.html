@@ -11,7 +11,8 @@
   <mat-toolbar-row>
     <form class="form">
       <mat-form-field class="full-width">
-        <input class="input" matInput placeholder="Search" value="">
+        <input class="input" matInput name="search" [(ngModel)]="searchText" placeholder="Search" debounce="500"
+          showCancelButton="focus">
       </mat-form-field>
     </form>
   </mat-toolbar-row>
