@@ -11,19 +11,21 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
-import { FilterPipe } from 'src/app/common/pipes/filter.pipe';
 import { ApiClientService } from 'src/app/common/services/api-client.service';
 import { TrettonColleagueService } from 'src/app/common/services/tretton-colleagues/tretton-colleague.service';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { FilterPipe } from 'src/app/common/pipes/filter.pipe';
+import { SortPipe } from 'src/app/common/pipes/sort.pipe';
 
 @NgModule({
   declarations: [
     ColleaguesComponent,
     ColleagueCardComponent,
-    FilterPipe
+    FilterPipe,
+    SortPipe
   ],
   imports: [
     CommonModule,

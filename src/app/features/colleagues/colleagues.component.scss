@@ -15,7 +15,7 @@ mat-toolbar {
 .main-content {
   overflow-x: hidden;
   overflow-y: hidden;
-  margin-top: 64px;
+  margin-top: 72px;
   text-align: center;
 }
 
@@ -25,4 +25,8 @@ mat-toolbar {
 
 .spacer {
   flex: 1 1 auto;
+}
+
+.flex-col {
+  margin: 0 auto;
 }

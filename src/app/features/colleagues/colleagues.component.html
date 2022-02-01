@@ -10,8 +10,8 @@
       <mat-icon>sort</mat-icon>
     </button>
     <mat-menu #sortMenu="matMenu" title="Sort by">
-      <button mat-menu-item>Name</button>
-      <button mat-menu-item>Office</button>
+      <button mat-menu-item (click)='sort("name")'>Name</button>
+      <button mat-menu-item (click)='sort("office")'>Office</button>
     </mat-menu>
 
     <button mat-icon-button [matMenuTriggerFor]="filterMenu" title="Filter by">
@@ -40,8 +40,9 @@
 
 <div class="main-content">
   <ng-template [ngIf]="viewList" [ngIfElse]="grid">
-    <div fxLayout="column wrap" fxLayoutGap="16px" class="full-width">
-      <app-colleague-card fxLayoutAlign="center center" *ngFor="let colleague of currentColleagues | filter: searchText"
+    <div fxLayout="column wrap" fxLayoutGap="16px" fxLayoutAlign="center center" class="full-width">
+      <app-colleague-card fxLayoutAlign="center center"
+        *ngFor="let colleague of currentColleagues | filter: searchText | sort : { sortBy: sortColumn, order: order}"
         [data]="colleague">
       </app-colleague-card>
     </div>
@@ -49,8 +50,8 @@
 
   <ng-template #grid>
     <div fxLayout="row wrap" fxLayoutGap="16px grid">
-      <div fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%"
-        *ngFor="let colleague of currentColleagues | filter: searchText">
+      <div class="flex-col" fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="44%" fxLayoutAlign="center center"
+        *ngFor="let colleague of currentColleagues | filter: searchText | sort : { sortBy: sortColumn, order: order}">
         <app-colleague-card [data]="colleague">
         </app-colleague-card>
       </div>

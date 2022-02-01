@@ -12,6 +12,10 @@ export class ColleaguesComponent implements OnInit {
   searchText: string = '';
   viewList = true;
 
+  sortColumn = "name";
+  descending = false;
+  order: number = 1;
+
   constructor(private colleaugeService: TrettonColleagueService) { }
 
   ngOnInit(): void {
@@ -24,5 +28,11 @@ export class ColleaguesComponent implements OnInit {
 
   listView(value: boolean) {
     this.viewList = value;
+  }
+
+  sort(by: string = "name") {
+    this.sortColumn = by;
+    this.descending = !this.descending;
+    this.order = this.descending ? 1 : -1;
   }
 }

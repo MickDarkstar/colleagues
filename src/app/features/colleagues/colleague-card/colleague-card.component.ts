@@ -6,13 +6,6 @@ import { ITrettonColleague } from 'src/app/common/services/tretton-colleagues/tr
   templateUrl: './colleague-card.component.html',
   styleUrls: ['./colleague-card.component.scss']
 })
-export class ColleagueCardComponent implements OnInit {
-  @Input()
-  data!: ITrettonColleague;
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+export class ColleagueCardComponent {
+  @Input() data!: ITrettonColleague;
 }

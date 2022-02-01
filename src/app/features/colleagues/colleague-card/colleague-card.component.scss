@@ -1,15 +1,9 @@
 .card {
-  width: 200px;
-  // margin: 16px auto;
-  // display: flex;
-  // margin: 0 auto; // för listan
+  margin: 16px;
+  min-width: 200px;
+  max-width: 400px;
   padding: 16px;
 }
-
-// .mat-card-image {
-//   width: calc(100% - 32px);
-//   margin: 0 -16px 16px -16px;
-// }
 
 mat-icon {
   padding: 8px;
