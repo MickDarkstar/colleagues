@@ -1,0 +1,20 @@
+.card {
+  max-width: 400px;
+  margin: 16px auto;
+}
+
+.image {
+  background-image: url("https://material.angular.io/assets/img/examples/shiba1.jpg");
+  background-size: cover;
+}
+
+mat-icon {
+  padding: 8px;
+}
+
+// .links {
+//   float: right;
+//   margin: 0 auto;
+
+//   padding: 8px auto;
+// }

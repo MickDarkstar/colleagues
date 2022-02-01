@@ -1,1 +1,24 @@
-<p>colleagues works!</p>
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <span class="title">The fellowship of the Tretton37</span>
+  </mat-toolbar-row>
+</mat-toolbar>
+<mat-divider></mat-divider>
+
+<mat-toolbar color="secondary" class="toolbox">
+  <span class="spacer"></span>
+  <mat-divider></mat-divider>
+  <mat-toolbar-row>
+    <form class="form">
+      <mat-form-field class="full-width">
+        <input class="input" matInput placeholder="Search" value="">
+      </mat-form-field>
+    </form>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<div>
+  <app-colleague-card></app-colleague-card>
+  <app-colleague-card></app-colleague-card>
+  <app-colleague-card></app-colleague-card>
+</div>

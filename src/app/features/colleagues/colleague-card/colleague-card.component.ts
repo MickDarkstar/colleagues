@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { ITrettonColleague } from 'src/app/common/services/tretton-colleagues/tretton-colleague.model';
 
 @Component({
   selector: 'app-colleague-card',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./colleague-card.component.scss']
 })
 export class ColleagueCardComponent implements OnInit {
+  @Input()
+  data!: ITrettonColleague;
 
   constructor() { }
 
