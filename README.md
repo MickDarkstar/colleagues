@@ -15,7 +15,8 @@ https://tretton37-code-assignment.web.app/colleagues
 ## Development server
 Install node and node package manager:
 https://docs.npmjs.com/cli/v8/configuring-npm/install
-or 
+
+or:
 https://nodejs.org/en/download/
 
 Install Angular CLI (skip -g for local installation)
