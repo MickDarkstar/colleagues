@@ -1,6 +1,30 @@
-# Colleagues
+# About the app "Colleagues"
+Lists employees from a specific company :D
+Implemented functionalites:
+ - Switch between list or gridview
+ - Free text Search, matches any property on employee.
+ - Sort by name/office
+
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.1.
+Other dependencies angular-flexlayout, angular-material
+
+## To run app 
+install node and node package manager:
+https://docs.npmjs.com/cli/v8/configuring-npm/install
+or 
+https://nodejs.org/en/download/
+
+Install Angular CLI (skip -g for local installation)
+`npm i -g @angular/cli`
+
+Run inside project folder
+`npm install`
+
+Add url to trettonApiUrl and authorization token to trettonApiAuth in environment.ts
+Then run:
+`ng serve`
 
 ## Development server
 
@@ -17,11 +41,3 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 ## Running unit tests
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
